@@ -1,3 +1,18 @@
-import './styles/style.css'
+import './styles/style.css';
+import barba from '@barba/core';
+import webgl from './webgl';
 
-console.log('Hello')
+barba.init({
+    transitions: [{
+      name: 'default-transition',
+      once() {
+        webgl()
+      },
+      leave() {
+
+      },
+      enter() {
+        // create your amazing enter animation here
+      }
+    }]
+  });
